@@ -13,7 +13,16 @@ Le cloner ensuite sur la machine locale
 #+BEGIN_SRC python3yy
 virtualenv venv-nutrition
 source venv-nutrition/bin/activate
-pip install django --save
+pip install django
 #+END_SRC
 
+
+** Chapitre d'introduction
+Bla bla
+
+** Chapitre d'introduction
+Bla bla
+
+** Chapitre d'introduction
+Bla bla
 
