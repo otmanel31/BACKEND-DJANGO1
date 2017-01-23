@@ -29,7 +29,7 @@ Bla bla
 
 ** Création des modèles à partir du dump d'une base de données
 
-Étudier le dump de base de données data.sql et écrire les modèles Django associés à chaque table :
+Étudier le dump de base de données ~data.sql~ et écrire les modèles Django associés à chaque table :
 - Aliment
 - PortionAliment
 - Nutriment
