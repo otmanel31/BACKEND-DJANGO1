@@ -3,9 +3,10 @@
 ** Ressources à lire en classe inversée
 
 - [[https://www.djangoproject.com/][Django]]
+- [[https://docs.djangoproject.com/en/1.10/intro/tutorial01/][Writing your first Django app]]
+
 
 ** Forker le projet 'BACKEND-Introduction to Django'
-
 Le cloner ensuite sur la machine locale
 
 ** Créer un environnement virtuel, y installer Django 1.10
@@ -25,4 +26,12 @@ Bla bla
 
 ** Chapitre d'introduction
 Bla bla
+
+** Création des modèles à partir du dump d'une base de données
+
+Étudier le dump de base de données data.sql et écrire les modèles Django associés à chaque table :
+- Aliment
+- PortionAliment
+- Nutriment
+- NutData
 
