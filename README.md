@@ -32,7 +32,7 @@ python manage.py runserver
 Ouvrir un navigateur à l'url : http://127.0.0.1:8000
 
 
-## Créer une 'application' (au sens Django) appelée 'aliments'
+## Créer une 'application' (au sens Django, ou 'app') appelée *aliments*
 ```bash
 python manage.py startapp aliments
 ```
@@ -43,10 +43,12 @@ sqlite3 stripped_ctdit_v11.db
 > .schema
 ```
 
-## Créer ~nutrition/aliments/models.py~ à partir de ces schémas
+## Créer *nutrition/aliments/models.py* à partir de ces schémas
 Voir fichier joints
 
-## Ajouter l'application ~aliments~ à ~INSTALLED_APPS~ dans settings.py
+
+## Ajouter l'application *aliments* à *INSTALLED_APPS* dans settings.py
+
 
 ## Créer et appliquer la migration associée à la création des nouveaux modèles
 ```bash
@@ -93,5 +95,5 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
-Ouvrir un navigateur à l'url : http://127.0.0.1:8000
+Ouvrir un navigateur à l'url : http://127.0.0.1:8000/admin
 
