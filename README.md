@@ -1,6 +1,6 @@
 # Marche à suivre
 
-## Forker le projet 'BACKEND-Introduction to Django'
+## Forker le projet *BACKEND-Introduction to Django*
 Le cloner ensuite sur la machine locale
 
 ## Créer un environnement virtuel, y installer Django 1.10
@@ -17,7 +17,7 @@ django-admin startproject nutrition
 cd nutrition
 ```
 
-## Modifier le fichier nutrition/nutrition/settings.py selon les besoins
+## Modifier le fichier *nutrition/nutrition/settings.py* selon les besoins
 Si on change rien, BD = db.sqlite3
 
 ## Créer une migration initiale qui va créer les tables d'administration dans la base
@@ -43,10 +43,10 @@ sqlite3 stripped_ctdit_v11.db
 > .schema
 ```
 
-## Créer nutrition/aliments/models.py à partir de ces schémas
+## Créer ~nutrition/aliments/models.py~ à partir de ces schémas
 Voir fichier joints
 
-## Ajouter l'application 'aliments' à INSTALLED_APPS dans settings.py
+## Ajouter l'application ~aliments~ à ~INSTALLED_APPS~ dans settings.py
 
 ## Créer et appliquer la migration associée à la création des nouveaux modèles
 ```bash
