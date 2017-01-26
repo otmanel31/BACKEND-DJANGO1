@@ -3,7 +3,7 @@
 ## Forker le projet *BACKEND-Introduction to Django*
 Le cloner ensuite sur la machine locale
 ```bash
-git clone ...
+git clone https://gitlab.enseeiht.fr:<username>/BACKEND-DJANGO1
 ```
 
 ## Créer un environnement virtuel, y installer Django 1.10
