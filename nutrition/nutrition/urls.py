@@ -18,7 +18,7 @@ from django.contrib import admin
 from rest_framework import routers
 from aliments.views import *
 from users.views import *
-
+from rest_framework.authtoken import views
 #admin.autodiscover()
 
 router = routers.DefaultRouter()
@@ -31,7 +31,6 @@ router.register(r'repas', RepasViewset)
 router.register(r'elementrepas', ElementrepasViewset)
 #router.register(r'search')
 
-
 # urlpatterns = [
 #     url(r'^admin/', admin.site.urls),
 #     url(r'^api/', routers.urls)
@@ -40,7 +39,7 @@ urlpatterns = (
     # Examples:
     # url(r'^$', 'eboutique.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
+    url(r'^get-token/', views.obtain_auth_token),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(router.urls)),
     url(r'^aliments/mean/(?P<nutr_no>\d+)$',ListAliments.as_view(),name='mean'),

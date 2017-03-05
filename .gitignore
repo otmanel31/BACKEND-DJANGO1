@@ -3,4 +3,6 @@ nutdata.dat
 aliment.dat
 nutriment.dat
 portionaliment.dat
-
+nutrition/aliments/migrations
+nutrition/users/migrations
+.VSCODE

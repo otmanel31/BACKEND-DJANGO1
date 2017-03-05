@@ -7,11 +7,11 @@ class NutriuserSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class RepasSerializer(serializers.ModelSerializer):
-    class meta:
-        meta = Repas
+    class Meta:
+        model = Repas
         fields = '__all__'
 
 class ElemenRepasSerializer(serializers.ModelSerializer):
     class Meta:
-        meta = ElementRepas
+        model = ElementRepas
         fields = '__all__'

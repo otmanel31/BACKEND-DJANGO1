@@ -49,3 +49,6 @@ class NutriuserTestCase(TestCase):
         user.username = 'tata'
         print('my update user after', user.username)
         self.assertEqual(user.username, 'tata')
+
+    def test_get_header_token(self):
+        pass
