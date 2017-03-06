@@ -31,24 +31,12 @@ class ListAliments(APIView):
 
 
 class AlimentViewSet(viewsets.ModelViewSet):
-    # def get_auth_token(self, request):
-    #     username = request.POST.get('username')
-    #     password = request.POST.get('password')
-    #     user = authenticate(username=username, password=password)
-    #     if user is not None:
-    #         print('sa amrcheeeeee')
-    #         if user.is_active:
-    #             token, created = Token.objects.get(user=user)
-    #             request.session['auth']= token.key
-    #             return redirect('api/aliments/37/', request)
-    #         return redirect(settings.LOGIN_URL, request)
     authentication_classes = (TokenAuthentication, )#SessionAuthentication, BasicAuthentication)
     permission_classes = (IsAuthenticated,)
 
     queryset = Aliment.objects.all()
     serializer_class = AlimentSerializer
-    def get_object(self):
-        print('in al view  ',self.request.user)
+
 class NutrimentViewSet(viewsets.ModelViewSet):
     queryset = Nutriment.objects.all()
     serializer_class = NutrimentSerializer

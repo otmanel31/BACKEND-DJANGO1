@@ -9,18 +9,7 @@ from django.contrib.auth.models import User
 
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
-
-def get_auth_token(request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    user = authenticate(username=username, password=password)
-    if user is not None:
-        # the password verified for the user
-        print('ok PASSAFE')
-        if user.is_active:
-            token, created = Token.objects.get_or_create(user=user)
-            request.session['auth'] = token.key
-            return redirect('/api/aliments/', request)
+from rest_framework.views import APIView
 
 # Create your views here.
 class NutriuserViewset(viewsets.ModelViewSet):
@@ -39,3 +28,7 @@ class RepasViewset(viewsets.ModelViewSet):
 class ElementrepasViewset(viewsets.ModelViewSet):
     queryset = ElementRepas.objects.all()
     serializer_class = ElemenRepasSerializer
+
+class TotalCalorique(APIView):
+    def post(self):
+        pass

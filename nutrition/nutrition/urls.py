@@ -39,7 +39,7 @@ urlpatterns = (
     # Examples:
     # url(r'^$', 'eboutique.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-    url(r'^get-token/', views.obtain_auth_token),
+    url(r'^api-token-auth/', views.obtain_auth_token),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(router.urls)),
     url(r'^aliments/mean/(?P<nutr_no>\d+)$',ListAliments.as_view(),name='mean'),
