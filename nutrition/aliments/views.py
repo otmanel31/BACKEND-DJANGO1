@@ -17,6 +17,7 @@ from django.conf import settings
 class ListAliments(APIView):
     def post(self, request, nutr_no):
         datas = request.data
+        print(datas)
         total = 0
         moyenne = 0
         for data in datas:
@@ -31,8 +32,8 @@ class ListAliments(APIView):
 
 
 class AlimentViewSet(viewsets.ModelViewSet):
-    authentication_classes = (TokenAuthentication, )#SessionAuthentication, BasicAuthentication)
-    permission_classes = (IsAuthenticated,)
+    authentication_classes = (SessionAuthentication, )#SessionAuthentication, BasicAuthentication)
+    permission_classes = (IsAuthenticated,) #TokenAuthentication
 
     queryset = Aliment.objects.all()
     serializer_class = AlimentSerializer

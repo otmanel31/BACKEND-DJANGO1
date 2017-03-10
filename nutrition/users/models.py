@@ -24,9 +24,9 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
     else:
-        user_auth = Token.objects.get(user=instance)
+        Token.objects.get(user=instance)
 
-        print('my user token', user_auth)
+        #print('my user token', user_auth)
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def update_bmi( instance, update_fields, created=False, **kwargs):
