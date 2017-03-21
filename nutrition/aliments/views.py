@@ -32,11 +32,20 @@ class ListAliments(APIView):
 
 
 class AlimentViewSet(viewsets.ModelViewSet):
-    authentication_classes = (SessionAuthentication, )#SessionAuthentication, BasicAuthentication)
-    permission_classes = (IsAuthenticated,) #TokenAuthentication
+    #authentication_classes = (SessionAuthentication, )#SessionAuthentication, BasicAuthentication)
+    #permission_classes = (IsAuthenticated,) #TokenAuthentication
 
     queryset = Aliment.objects.all()
     serializer_class = AlimentSerializer
+
+    filter_fields = ('shrt_desc', 'long_desc', 'pîct')
+
+    def get_queryset(self):
+        qs = self.queryset
+        search = self.request.query_params.get('search', None)
+        if search:
+            qs = qs.filter(shrt_desc__icontains = search)
+        return qs
 
 class NutrimentViewSet(viewsets.ModelViewSet):
     queryset = Nutriment.objects.all()

@@ -1,0 +1,35 @@
+<html ng-app="myApp">
+
+   <body ng-controller='CartController'>
+
+      <h1>Liste des articles</h1>
+
+      <div ng-repeat='item in items'>
+         <span>Article {{$index}}</span>
+         <input ng-model='item.name' >
+         <input ng-model='item.quantity'>
+         <input ng-model='item.price'>
+         <span>{{item.price * item.quantity | currency}}</span>
+         <button ng-click="remove($index)">Supprimer</button>
+      </div>
+
+      <button ng-click="add()">Ajouter</button>
+
+        <br />
+
+    <div ng-if='items.length >0'>
+        <h2>Recapit</h2>
+        <div ng-repeat='item in items'>
+            <p>{{item.name}}</p>
+        <h2>Total</h2>
+        <p>{{ total() }}</p>
+
+        </div>
+    </div>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="cart.controller.js"></script>
+   </body>
+
+</html>
+
+

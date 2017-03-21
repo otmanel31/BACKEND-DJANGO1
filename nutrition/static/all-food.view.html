@@ -1,0 +1,38 @@
+<html ng-app='myApp'>
+   <head>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+   </head>
+
+   <body ng-controller='AllFoodsController'>
+
+      <h1>Liste des aliments</h1>
+
+      <input ng-model='mySearch' ng-change="doSearch()"/> <span><button ng-click="doSearch()">Search</button></span>
+      <br />
+      <button ng-click="sortBy(shrt_desc)">a-z</button> <br />
+      <input ng-model='client_search'  /> 
+      <br />
+      <span class="sortorder" ng-show=" name === 'shrt_desc'" ng-class="{reverse: reverse}"></span>
+      <div class="list-group-item" ng-repeat="aliment in aliments | filter: client_search | orderBy: shrt_desc">
+      <!--<div class="list-group-item" ng-repeat="aliment in aliments">-->
+
+        <div class="row">
+            <div class="col-sm-3">
+               {{ aliment.shrt_desc }}
+            </div>
+         </div>
+
+      </div>
+
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+      <script src="app.modules.js"></script>
+
+      <script src="aliment.factory.js"></script>
+      <script src="all-foods.controller.js"></script>
+   </body>
+
+</html>

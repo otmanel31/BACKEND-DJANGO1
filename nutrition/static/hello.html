@@ -1,0 +1,27 @@
+<html ng-app='myApp'>
+
+   <body>
+      <div ng-controller='HelloController'>
+
+         <input ng-model='identity.name'>
+
+         <p>Salut {{identity.name}}</p>
+
+         <h1>{{identity.name}}, tu es le meilleur</h1>
+
+         <input ng-model='identity.name'>
+
+      </div>
+   </body>
+
+   <script src="bower_components/angular/angular.js"></script>
+   <script>
+      var app = angular.module('myApp', []);
+      app.controller('HelloController',
+         function ($scope) {
+            $scope.identity = {};
+         }
+      );
+   </script>
+
+</html>
