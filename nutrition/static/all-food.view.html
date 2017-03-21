@@ -14,12 +14,13 @@
       <input ng-model='client_search'  /> 
       <br />
       <span class="sortorder" ng-show=" name === 'shrt_desc'" ng-class="{reverse: reverse}"></span>
+      
       <div class="list-group-item" ng-repeat="aliment in aliments | filter: client_search | orderBy: shrt_desc">
       <!--<div class="list-group-item" ng-repeat="aliment in aliments">-->
 
         <div class="row">
             <div class="col-sm-3">
-               {{ aliment.shrt_desc }}
+               <a>{{ aliment.shrt_desc }}</a>
             </div>
          </div>
 
