@@ -20,7 +20,13 @@ appModule.config(function ($urlRouterProvider, $stateProvider) {
                   return Aliment.get({ id: foodId });
                },
             },
+         })
+      /*.state('meal', {
+               url: '/meal',
+               templateUrl: 'meal.view.html',
+               controller: 'MealController', 
          });
-
+*/
+      
 
 });
