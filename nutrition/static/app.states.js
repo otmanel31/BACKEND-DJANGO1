@@ -1,4 +1,6 @@
- $urlRouterProvider.otherwise('/foods');
+appModule.config(function ($urlRouterProvider, $stateProvider) {
+
+      $urlRouterProvider.otherwise('/foods');
 
       $stateProvider
 
@@ -19,3 +21,6 @@
                },
             },
          });
+
+
+});
