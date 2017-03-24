@@ -17,16 +17,37 @@ appModule.config(function ($urlRouterProvider, $stateProvider) {
             resolve: {
                food: function ($stateParams, Aliment) {
                   var foodId = parseInt($stateParams.foodId, 10);
+                  
                   return Aliment.get({ id: foodId });
                },
             },
+         })
+         .state('portions',{
+               url: '/portions/{portionId}',
+               templateUrl: 'portionaliment.view.html',
+               controller: 'PortionAlimentController',
+                resolve: {
+                     portion : function($stateParams, Portionaliment){
+                        var portionId = parseInt($stateParams.portionId, 10)
+                        console.log('id p ', portionId)
+                        console.log('toto', Portionaliment.get({aliment_id: portionId}))
+                        return Portionaliment.get({aliment_id: portionId})
+                        
+                      }
+               },
          });
-      /*.state('meal', {
-               url: '/meal',
-               templateUrl: 'meal.view.html',
-               controller: 'MealController', 
-         });
-*/
-      
+         /*.state('portions.portion', {
+               url: '/portion/{portionId}',
+               templateUrl: 'portionaliment.view.html',
+               controller: 'portionDetailController',
+               resolve: {
+                     portion : function($stateParams, Portionaliment){
+                        let portionId = parseInt($stateParams.portionId, 10)
+                        console.log('id p ', portionId)
+                        return Portionaliment.get({aliment_id: portionId})
+                        
+                      }
+               },
+         });*/
 
 });
