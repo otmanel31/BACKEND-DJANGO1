@@ -3,7 +3,7 @@ angular.module('myApp').controller('FoodsController',
 
       $scope.aliments = Aliment.query({ })
 
-      console.log('all alimlent ', $scope.aliments);
+      console.log('all aliment ', $scope.aliments);
 
    }
 );

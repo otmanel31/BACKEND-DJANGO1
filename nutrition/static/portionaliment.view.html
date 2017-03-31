@@ -1,1 +1,14 @@
-<div> {{ portion.id }} </div>
+<h2>Portion aliments: {{ aliment.shrt_desc}}</h2>
+<div class="list-group-item" ng-repeat="portion in portionaliment">
+     <div class="row" >
+        
+        id portion: {{ portion.id }}   <br />
+        id aliment: {{portion.aliment_id}}  <br />
+        type: {{portion.nom}}  <br />
+        poids: {{portion.poids}} <br />
+        Please select in order to add portion <input type='checkbox' /><br/>
+        
+    </div>
+    
+</div>
+<button>Add portion(s)</button>

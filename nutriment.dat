@@ -1,0 +1,68 @@
+203|228|g|PROCNT|protein, total
+204|232|g|FAT|fat, total
+205||g|CHOCDF|carbohydrate, by difference
+207|236|g|ASH|mineral
+208|200|kcal|ENERG_KCAL|energy kcal
+209||g|STARCH|starch, total
+210||g|SUCS|sucrose
+211||g|GLUS|glucose
+212||g|FRUS|fructose
+214||g|MALS|maltose
+219||g|AMYP|amylopectine
+221|990|g|ALC|alcohol
+245||mg|OXALAC|oxalic acid
+254||g|CHOCSM|carbohydrate total
+255|220|g|WATER|moisture
+262|788|mg|CAFFN|caffeine
+263|848|mg|THEBRN|theobromine
+268|204|kj|ENERC_KJ|energy KJ
+291|262|g|FIBTG|fiber
+301|580|mg|CA|calcium, Ca
+303|604|mg|FE|fer, Fe
+304|608|mg|MG|magnesium, Mg
+305|620|mg|P|phosphorus, P
+306|624|mg|K|potassium, K
+307|632|mg|NA|sodium, Na
+309|636|mg|ZN|zinc, Zn
+312|592|mg|CU|cuivre, Cu
+315|612|mg|MN|manganese, Mn
+317|628|mcg|SE|selenium, Se
+318|674|IU|VITA_IU|vitamin A, IU
+319||mcg|RETOL|retinol, preformed vitA
+324||mcg|VITD|ergocalciferol + cholecalciferol
+375||mg|NACL|salt
+392|678|mcg_RE|VITA_RE|vitamin A, RE
+394|730|mg|VITE|tocopherols
+401|714|mg|VITC|ascorbic acid, vitC
+404|670|mg|THIA|thiamine, vitB1
+405|666|mg|RIFB|riboflavine, vitB2
+406|658|mg|NIA|niacine, vitPP (B3)
+410|662|mg|PANTAC|pantothenic acid, vitB5
+415|710|mg|VITB6A|pyridoxine, vitB6
+416||mg|BIOT|biotin, vitB8
+417|654|mcg|FOL|folate, total vitB9
+418|706|mcg|VITB12|cobalamin, B12
+501|400|g|TRP|tryptophan
+502|398|g|THR|threonine
+503|384|g|ILE|isoleucine
+504|386|g|LEU|leucine
+505|388|g|LYS|lysine
+506|390|g|MET|methionine
+507|376|g|CYS|cystine
+508|392|g|PHE|phenylalanine
+509|402|g|TYR|tyrosine
+510|404|g|VAL|valine
+511|372|g|ARG|arginine
+512|382|g|HIS|histidine
+513|370|g|ALA|alanine
+514|374|g|ASP|aspartate
+515|378|g|GLU|glutamate
+516|380|g|GLY|glycine
+517|394|g|PRO|proline
+601|334|mg|CHOLE|cholesterol
+605||mg|FATRN|fatty acids, total trans
+606|420|g|FASAT|fatty acids, total saturated
+620||g|F20D4|arachidonic acid
+645|490|g|FAMS|fatty acids, total monounsaturated
+646|520|g|FAPU|fatty acids, total polyunsaturated
+675||g|F18D2CN6|linoleic acid

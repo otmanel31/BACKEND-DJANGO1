@@ -14,6 +14,7 @@ appModule.config(function ($urlRouterProvider, $stateProvider) {
             url: '/food/{foodId}',
             templateUrl: 'food-details.view.html',
             controller: 'FoodDetailsController',
+            transclude: true,
             resolve: {
                food: function ($stateParams, Aliment) {
                   var foodId = parseInt($stateParams.foodId, 10);
@@ -22,21 +23,27 @@ appModule.config(function ($urlRouterProvider, $stateProvider) {
                },
             },
          })
-         .state('portions',{
+         .state('foods.portions', {
                url: '/portions/{portionId}',
                templateUrl: 'portionaliment.view.html',
                controller: 'PortionAlimentController',
-                resolve: {
+               transclude: true,
+               replace: true,
+               /*resolve: {
                      portion : function($stateParams, Portionaliment){
-                        var portionId = parseInt($stateParams.portionId, 10)
+                        let portionId = parseInt($stateParams.portionId, 10)
                         console.log('id p ', portionId)
-                        console.log('toto', Portionaliment.get({aliment_id: portionId}))
                         return Portionaliment.get({aliment_id: portionId})
-                        
                       }
-               },
-         });
-         /*.state('portions.portion', {
+               },*/
+         })
+         /*
+         .state('portions',{
+               url: '/portions',
+               templateUrl: 'portionaliment.view.html',
+               controller: 'PortionAlimentController',
+         })
+         .state('portions.portion', {
                url: '/portion/{portionId}',
                templateUrl: 'portionaliment.view.html',
                controller: 'portionDetailController',
@@ -45,7 +52,6 @@ appModule.config(function ($urlRouterProvider, $stateProvider) {
                         let portionId = parseInt($stateParams.portionId, 10)
                         console.log('id p ', portionId)
                         return Portionaliment.get({aliment_id: portionId})
-                        
                       }
                },
          });*/
